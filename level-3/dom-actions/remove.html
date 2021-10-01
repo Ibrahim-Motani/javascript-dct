@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Remove Element</title>
+</head>
+<body>
+    <button>Remove me</button>
+    <!-- random comment -->
+    <script>
+        const btn = document.querySelector('button');
+        const body = document.querySelector('body');
+
+        btn.addEventListener('click', function() {
+            body.removeChild(btn);
+        });
+    </script>
+</body>
+</html>

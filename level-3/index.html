@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+</head>
+
+<body style="background-color: aquamarine;">
+    <h1 style="text-align: center;">User Form</h1>
+    <div style="display: flex; justify-content: center;">
+        <form onSubmit='submitForm(event)'>
+            <label>Username</label> <br>
+            <input type="email" id='email' > <br>
+            <label>Password</label> <br>
+            <input type="password" id='password'> <br>
+            <input type="checkbox" id="check">
+            <label>Show password</label> <br>
+            <input type="submit">
+        </form>
+    
+    </div>
+    <script>
+            const check = document.querySelector('#check');
+            const password = document.querySelector('#password');
+
+            check.addEventListener('click', function(event) {
+                if(event.target.checked)
+                    password.setAttribute('type', 'text');
+                else
+                    password.setAttribute('type', 'password');     
+            });
+
+            function submitForm(event) {
+                console.log(event);
+                event.preventDefault();
+                const email = document.querySelector('#email');
+                const password = document.querySelector('#password');
+
+                if(email.value.length != 0 && password.value.length != 0)
+                    alert('Form Submitted');
+                else if(email.value.length === 0)
+                    alert(`Email required`);
+                else if(password.value.length === 0)
+                alert(`Password required`);
+            };
+    </script>
+</body>
+</html>

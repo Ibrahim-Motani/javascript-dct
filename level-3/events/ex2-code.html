@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body style="background-color: aquamarine;">
+    <button>Change color</button>
+
+    <script>
+        const btn = document.querySelector('button');
+        const colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+        
+        btn.addEventListener('click', function() {
+            document.querySelector('body').style.backgroundColor = `${colors[getRandomInt(5)]}`;
+        });
+    </script>
+</body>
+</html>

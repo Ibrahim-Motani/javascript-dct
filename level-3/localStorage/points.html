@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Working with Local Storage</h1>
+
+    <script>
+       localStorage.setItem('name', 'Jack');
+       localStorage.setItem('age', 42);
+       console.log(localStorage);
+
+       localStorage.setItem('contact', JSON.stringify({mobile: '123456', email: 'abc@xyz'}));
+       localStorage.setItem('skills', JSON.stringify(['react', 'js', 'angular']));
+       console.log(localStorage);
+
+       const parsedContact = JSON.parse(localStorage.getItem('contact'));
+       console.log(parsedContact);
+
+       const parsedSkills = JSON.parse(localStorage.getItem('skills'));
+       console.log(parsedSkills);
+    </script>
+</body>
+</html>

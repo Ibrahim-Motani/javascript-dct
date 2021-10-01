@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <ul></ul>
+    <script>
+        const h1 = document.querySelector('h1');
+        const list = document.querySelector('ul');
+
+        window.onload = function() {
+            const xhr = new XMLHttpRequest();
+            const link = `https://restcountries.eu/rest/v2/all?fields=name;capital`;
+            xhr.open('GET', link);
+            xhr.send();
+
+            xhr.onload = function() {
+                const data = JSON.parse(xhr.responseText);
+                h1.textContent = `Listing countries : ${data.length}`;
+                
+                data.forEach(element => {
+                    const li = document.createElement('li');
+
+                    li.innerHTML = `
+                    ${element.name} 
+                    <button 
+                    data-cap="${element.capital}" onclick="javascript:alert(this.getAttribute('data-cap'))">
+                    Show
+                    </button>`;
+                    
+                    list.appendChild(li);
+                });
+            };
+        };
+    </script>
+</body>
+</html>

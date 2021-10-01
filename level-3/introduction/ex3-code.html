@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+
+<body>
+    <h1></h1>
+
+    <script>
+        const now = new Date();
+        const hours =now.getHours();
+        let result = '';
+
+        if(hours>=0 && hours<=11)
+            result = 'Good morning';
+        else if(hours>=12 && hours<=17)
+            result = 'Good afternoon'
+        else if(hours>=18)
+            result = 'Good evening';
+
+        document.querySelector('h1').textContent = result;
+    </script>
+</body>
+</html>

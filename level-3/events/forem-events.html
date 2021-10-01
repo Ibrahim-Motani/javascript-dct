@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="submitForm(event)">
+        <label for="username">name</label>
+        <input type="text" onfocus="nameFocus()" onblur="nameBlur()" onchange="nameChange()" name="username" id="username" > <br>
+
+        <input type="submit">
+    </form>
+
+    <script>
+        function nameFocus() {
+            console.log('focus event fired');
+        }
+
+        function nameBlur() {
+            console.log('blur event fired');
+        }
+
+        function nameChange() {
+            console.log('change event fired');
+        }
+
+        function submitForm(event){
+            event.preventDefault();
+            console.log('Submit event fired', event);
+        }
+    </script>
+</body>
+</html>

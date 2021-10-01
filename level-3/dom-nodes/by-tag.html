@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Get elements by tag name</title>
+</head>
+<body>
+    <h1>Completed tasks</h1>
+    <ul>
+        <li>Understand requirements</li>
+        <li>Deplyment app</li>
+        <li>Development app</li>
+    </ul>
+
+    <script>
+        const elements = document.getElementsByTagName('li');
+        console.log(elements);
+        for(const ele of elements){
+            ele.style.textDecoration = 'line-through';
+        }
+    </script>
+</body>
+</html>

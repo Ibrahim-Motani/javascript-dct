@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Web Page</title>
+</head>
+<body>
+    <div id='app'>
+
+    </div>
+
+    <script>
+        const teams = [
+            'Chennai',
+            'Punjab',
+            'Gujarat',
+            'Kolkata',
+            'Bangalore',
+            'Delhi',
+            'Mumbai',
+            'Kerala',
+        ];
+        teams.sort();
+
+        const app = document.getElementById('app');
+
+        const h1 = document.createElement('h1');
+        h1.textContent = `List IPL Teams - ${teams.length}`;
+        app.appendChild(h1);
+
+        const ul = document.createElement('ul');
+        app.appendChild(ul);
+        teams.forEach(function(ele) {
+            const li = document.createElement('li');
+            li.textContent = ele;
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>

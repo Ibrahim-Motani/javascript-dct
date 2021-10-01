@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Traversing DOM Nodes</title>
+</head>
+<body>
+    <ul id="mytasks">
+        <li>requirements</li>
+        <li>development</li>
+        <li>deployment</li>
+    </ul>
+
+    <script>
+        const ul = document.getElementById('mytasks');
+        console.log(ul.children);
+        console.log('first element', ul.firstElementChild);
+        console.log('last element', ul.lastElementChild);
+        console.log('second child', ul.firstElementChild.nextElementSibling);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Working with Local Storage</h1>
+
+    <script>
+        console.log(localStorage);
+
+        // add
+        localStorage.setItem('name', 'dct academy');
+        localStorage.setItem('city', 'bangalore');
+        console.log(localStorage);
+
+        // no of items in storage
+        console.log(localStorage.length);
+
+        // get a value
+        console.log(localStorage.getItem('city'));
+        console.log(localStorage.getItem('address'));
+
+        // remove item
+        localStorage.removeItem('city');
+        console.log(localStorage);
+
+        // clear storage
+        localStorage.clear();
+        console.log(localStorage);
+    </script>
+</body>
+</html>

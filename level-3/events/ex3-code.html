@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise</title>
+</head>
+<body>
+    <form>
+        <label for="string">Please enter string here</label> <br> <br>
+        <input type="text" id="str" name="string"> <br> <br>
+        <input type="submit" id="btn">
+    </form>
+
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function(event) {
+            event.preventDefault();
+            const str = document.querySelector('#str').value;
+            alert(`Total characters: ${str.length}`);
+            alert(`Total words: ${str.split(' ').length}`);
+        });
+    </script>
+</body>
+</html>

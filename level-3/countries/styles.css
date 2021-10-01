@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#hero {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#ip, #ip1 {
+    width: 350px;
+    height: 35px;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+#ip::placeholder, #ip1::placeholder {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-bottom: 5px;  
+}
+
+#ip:focus, #ip1:focus, textarea:focus, select:focus {
+    outline: none;
+    border: none;
+}
+
+.card {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    margin-top: 30px;
+    background-color: #a7c5eb;
+    border-radius: 20px;
+    box-shadow: 7px 7px 9px 5px;
+}
+
+.card1 {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    margin-top: 30px;
+    background-color: #8ac4d0;
+    border-radius: 20px;
+    box-shadow: 7px 7px 9px 5px;
+}
+
+h4 {
+    padding: 15px;
+    text-align: left;
+}
+
+#country-flag, #country-flag1 {
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 335px;
+}
+
+#card1 {
+    width: 50%;
+    float: left;
+}
+
+#card2 {
+    width: 50%;
+    float: right;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        h3:hover {
+            cursor: pointer;
+        }
+        h3{
+            display: inline;
+            padding-right: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>A</h3>
+    <h3>B</h3>
+    <h3>C</h3>
+    <h3>D</h3>
+    <h3>E</h3>
+    <h3>F</h3>
+    <h3>G</h3>
+    <h3>H</h3>
+    <h3>I</h3>
+    <h3>J</h3>
+    <h3>K</h3>
+    <h3>L</h3>
+    <h3>M</h3>
+    <h3>N</h3>
+    <h3>O</h3>
+    <h3>P</h3>
+    <h3>Q</h3>
+    <h3>R</h3>
+    <h3>S</h3>
+    <h3>T</h3>
+    <h3>U</h3>
+    <h3>V</h3>
+    <h3>W</h3>
+    <h3>X</h3>
+    <h3>Y</h3>
+    <h3>Z</h3>
+    <h1></h1>
+    <ul></ul>
+    <script>
+        const h1 = document.querySelector('h1');
+        const list = document.querySelector('ul');
+        const h3 = document.querySelectorAll('h3');
+        
+        const xhr = new XMLHttpRequest();
+        const link = `https://restcountries.eu/rest/v2/all?fields=name`;
+        xhr.open('GET', link);
+        xhr.send();
+
+        xhr.onload = function() {
+            const allCountries = JSON.parse(xhr.responseText).map(obj => obj.name);
+
+            for(let i=0; i<h3.length; i++) {
+                h3[i].addEventListener('click', function(event) {
+                    const letter = event.target.innerText;
+                    const filteredCountries = allCountries.filter(country => country[0] === letter);
+                    h1.innerText = `Listing countries : ${filteredCountries.length}`;
+
+                    const html = filteredCountries.map(country => `<li style="padding-bottom:10px;">${country}</li>`).join('');
+                    list.innerHTML = html;
+                })
+            }
+        };
+    </script>
+</body>
+</html>
